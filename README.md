@@ -3,7 +3,7 @@ You can use this translator for translating any document on GitHub.
 This creates the translated files by using the translate API such as DeepL.
 
 ## How to use
-1. Set env
+### 1. Set env
 Set below environment variable.
  ```
 GITHUB_USER_NAME ... User name of GitHub
@@ -21,8 +21,9 @@ INCLUDE ... The regex. Only the file which matched this is translated. For examp
 
  ```
 
- 2. Run
+### 2. Run
  To run, execute `yarn start`.
+
 
  ## API type
  Support API is below. (Now, DeepL only...)
