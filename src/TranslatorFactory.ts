@@ -1,6 +1,6 @@
-import DeepLTranslator from "./DeepLTranslator"
+import DeepLTranslator from "./Translator/DeepLTranslator"
 import Factory from "./Factory"
-import Translator from "./Translator"
+import Translator from "./Translator/Translator"
 
 export type TranslatorType = 'deepl'
 

@@ -11,7 +11,6 @@ export default class DeelLTranslater extends Translator {
   async translate(text: string, lang: string): Promise<string> {
     console.log('translating...')
     const result = await this.requestTranslation(text, lang)
-    console.log('result', result)
     return result
   }
 
@@ -21,7 +20,6 @@ export default class DeelLTranslater extends Translator {
     params.append('text', text)
     params.append('target_lang', lang)
 
-    console.log('request with', lang)
     const res = await axios.post('https://api-free.deepl.com/v2/translate', params)
     return res.data.translations[0].text
   }
