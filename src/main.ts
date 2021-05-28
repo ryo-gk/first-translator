@@ -1,6 +1,6 @@
 import { extractFileName, readFile, removeDir, scanDirectory, writeFile } from './file'
 import GitHub from './GitHub'
-import Translator from './Translator'
+import Translator from './Translator/Translator'
 import TranslatorFactory from './TranslatorFactory'
 
 export async function run() {
