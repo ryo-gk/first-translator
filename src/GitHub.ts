@@ -1,6 +1,6 @@
 import { execSync } from 'child_process'
+import { removeDirIfExist } from './file'
 
-// TODO carve out as GitConfig
 interface GitHubConfig {
   userName: string
   accessToken: string
@@ -23,10 +23,10 @@ export default class Git {
 
 
   clone(dir: string = 'docs') {
-    //TODO if dir is exists, then early return
+    removeDirIfExist(dir)
+
     const command = `git clone -b ${this.fromBranch} `
       + `https://${this.userName}:${this.accessToken}@github.com/${this.fromRepo}.git ./${dir}`
-
     execSync(command)
   }
 

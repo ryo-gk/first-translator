@@ -27,3 +27,7 @@ export function scanDirectory(dir: string) {
 export function removeDir(dir: string) {
   execSync(`rm -rf ${dir}`)
 }
+
+export function removeDirIfExist(dir: string) {
+  execSync(`test -d ${dir} && rm -rf ${dir}`)
+}

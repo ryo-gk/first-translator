@@ -20,7 +20,11 @@ export default class DeelLTranslater extends Translator {
     params.append('text', text)
     params.append('target_lang', lang)
 
-    const res = await axios.post('https://api-free.deepl.com/v2/translate', params)
-    return res.data.translations[0].text
+    try {
+      const res = await axios.post('https://api-free.deepl.com/v2/translate', params)
+      return res.data.translations[0].text
+    } catch (error) {
+      console.error(error)
+    }
   }
 }

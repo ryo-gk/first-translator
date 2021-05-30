@@ -1,7 +1,7 @@
 import { extractFileName, readFile, removeDir, scanDirectory, writeFile } from './file'
 import GitHub from './GitHub'
 import Translator from './Translator/Translator'
-import TranslatorFactory from './TranslatorFactory'
+import TranslatorFactory from './Factory/TranslatorFactory'
 
 export async function run() {
   const githubConfig = {
